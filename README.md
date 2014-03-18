@@ -1,4 +1,4 @@
-# Integrating Front End Components with Web Applications 
+## Integrating Front End Components with Web Applications 
 
 An e-book by [Maksim Surguy](http://twitter.com/msurguy)
 
@@ -10,7 +10,7 @@ Get the book from Leanpub by cliking on the book cover:
 
 The author of the book is Maksim Surguy. 
 
-Maksim Surguy is a professional [breakdancer](http://www.youtube.com/watch?v=s_b-6265knA) turned full time web developer. He is the creator, owner and sole developer of [Bootsnipp](http://bootsnipp.com), [Filegr.am](http://filegr.am), [Builtwithlaravel.com](http://builtwithlaravel.com), [Bookpag.es](http://bookpag.es) and many more websites. Partnering with [Stidges](http://twitter.com/stidges), he created (Laravel-tricks.com)[http://laravel-tricks.com] to help other developers discover tips and tricks for Laravel framework. Maks is an active contributor to the Laravel community and the author of [Laravel in Action](http://manning.com/surguy) from Manning Publications.
+Maksim Surguy is a professional [breakdancer](http://www.youtube.com/watch?v=s_b-6265knA) turned full time web developer. He is the creator, owner and sole developer of [Bootsnipp](http://bootsnipp.com), [Filegr.am](http://filegr.am), [Builtwithlaravel.com](http://builtwithlaravel.com), [Bookpag.es](http://bookpag.es) and many more websites. Partnering with [Stidges](http://twitter.com/stidges), he created [Laravel-tricks.com](http://laravel-tricks.com) to help other developers discover tips and tricks for Laravel framework. Maks is an active contributor to the Laravel community and the author of [Laravel in Action](http://manning.com/surguy) from Manning Publications.
 
 In his free time he either travels with his wife or creates tutorials on his blog.
 
