@@ -1,0 +1,32 @@
+<button class="btn btn-primary btn-lg btn-block" id="btn-send">Send a request!</button>
+<div class="spin-area" id="spin-area"></div>
+
+<script type="text/javascript">
+
+$(function() {
+
+  $('#btn-send').click(function(e){
+    e.preventDefault();
+
+    // Run the spinner
+    $('#spin-area').spin('large');
+
+    // Send a POST AJAX request to the "/data" URL of the application
+    $.ajax({
+        type: "POST",
+        url: "/data"
+        // If sending data, add this: data: { name: 'some Name' }
+      })
+      .done(function() {
+        alert( "Processed!" );
+      })
+      .fail(function() {
+        alert( "Error processing request" );
+      })
+      .always(function() {
+        $('#spin-area').spin(false);
+      });
+  });
+
+});
+</script>

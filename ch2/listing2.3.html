@@ -1,0 +1,11 @@
+<button onclick="makeItSpin()">Spin it!</button>
+
+<div id="spin-area"></div>
+
+<script>
+  var target = document.getElementById('spin-area');
+
+  function makeItSpin(){
+    var spinner = new Spinner().spin(target);
+  }
+</script>

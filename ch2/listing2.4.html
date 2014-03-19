@@ -1,0 +1,21 @@
+<button class="btn btn-default" onclick="toggleSpin()">Spin it!</button>
+
+<div id="spin-area"></div>
+
+<script>
+  // Set the target element that will be used by the spinner
+  var target = document.getElementById('spin-area');
+
+  var spinner;
+  var spinning = false;
+
+  function toggleSpin(){
+    /* if "spinning" variable is true, stop the spinner,
+       otherwise create the spinner over #spin-area element.
+    */
+    spinning ? spinner.stop() : spinner = new Spinner().spin(target);
+
+    spinning = !spinning;
+  }
+
+</script>
