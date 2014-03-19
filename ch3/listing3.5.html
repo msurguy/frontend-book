@@ -1,0 +1,19 @@
+<style>
+/* Create a cool pulsating glow effect */
+@-webkit-keyframes greenPulse {
+    from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+	  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.my-cool-class {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+</style>
+
+<script>
+humane.log("Changing options for an individual notification", { timeout: 10000,
+            clickToClose: true, addnCls: 'my-cool-class' });
+</script>

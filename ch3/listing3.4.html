@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Using Humane.js</title>
+    <link rel='stylesheet' href='themes/original.css'/>
+    <script src='humane.min.js'></script>
+    <style>
+    .myNotification {
+      color: #FF0000;
+    }
+    </style>
+  </head>
+<body>
+  <script>
+  // Change global options for all Humane.js notifications
+  humane.timeout = 4000; // Modify the time of notifications staying on the screen
+  humane.addnCls = 'myNotification'; // Add a class to all notifications
+
+  // Show an example notification
+  humane.log("Humane.js is ready for your command!");
+  </script>
+</body>

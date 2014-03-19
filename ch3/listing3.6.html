@@ -1,0 +1,11 @@
+<div id="done" style="display:none;">
+    Notification has been hidden
+</div>
+
+// Get the DOM element
+var el = document.getElementById("done");
+
+// Apply a callback function to Humane.js notification that will show the DOM element
+humane.log("Humane.js is ready for your command!", function(){
+    el.style.display = 'inline';
+});

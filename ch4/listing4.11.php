@@ -1,0 +1,4 @@
+Route::post('contact', function()
+{
+  ...
+});
