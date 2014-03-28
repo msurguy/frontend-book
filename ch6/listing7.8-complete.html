@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selectize demo</title>
+    <!-- Bootstrap CSS served from a CDN -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/superhero/bootstrap.min.css"
+           rel="stylesheet">
+
+    <link href="vendor/selectize/css/selectize.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Transformed Select menu</h3>
+            </div>
+            <div class="panel-body">
+
+              <form>
+
+                <select id="currency-menu" multiple="multiple">
+                  <option value="">Choose your favorite cryptocurrency...</option>
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="Litecoin">Litecoin</option>
+                  <option value="Dogecoin">Dogecoin</option>
+                  <option value="Mastercoin">Mastercoin</option>
+                  <option value="Primecoin">Primecoin</option>
+                  <option value="Peercoin">Peercoin</option>
+                  <option value="Ripple">Ripple</option>
+                </select>
+                 
+                <input type="submit" value="Submit" class="btn btn-info btn-block">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="vendor/selectize/js/standalone/selectize.min.js"></script>
+    <script>
+    $(function() {
+      // Enable Selectize
+      $('#currency-menu').selectize({
+        plugins: ['remove_button']
+      });
+    });   
+    </script>
+  </body>
+</html>

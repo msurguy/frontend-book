@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic tagging</title>
+  </head>
+  <body>
+    <form role="form" id="contacts">
+
+      <select id="select-name" multiple placeholder="Select a person...">
+        <option value="4">John</option>
+        <option value="1">Steven</option>
+        <option value="3">Jo</option>
+        <option value="5">Mark</option>
+        <option value="15">Christopher Mapp</option>
+        <option value="22">Joy Lama</option>
+      </select>
+      
+      <input type="submit" value="Submit">
+
+    </form>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+     $(function() {
+      $('#contacts').submit(function(e){
+        e.preventDefault();
+        alert('You have chosen the following users: '+ JSON.stringify($('#select-name').val()));
+      });
+    });   
+    </script>
+  </body>
+</html>
