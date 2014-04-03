@@ -52,9 +52,9 @@ class CreateTables extends Migration {
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('tags');
-		Schema::dropIfExists('posts');
 		Schema::dropIfExists('post_tag');
+		Schema::dropIfExists('posts');
+		Schema::dropIfExists('tags');
 	}
 
 }

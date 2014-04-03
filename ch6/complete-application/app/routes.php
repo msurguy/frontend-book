@@ -47,28 +47,36 @@ Route::post('/', function()
   $post->body = $input['body'];
   $post->save();
 
-  // Declare empty array of tag IDs
-  $tagIDs = [];
+  // If the input contains tags, attach them to the post, otherwise remove all tags from the post
+  if(Input::has('tags')){
 
-  // Add new tags to the DB
-  foreach ($input['tags'] as $tag) {
-    if($existingTag = Tag::where('name', $tag)->first()){
-      // If tag exists, make sure to add it to a list of tags that should be assigned to the post
-      $tagIDs[] = $existingTag->id;
+    // Declare empty array of tag IDs
+    $tagIDs = [];
 
-    } else {
-      // If tag does not exist, add it to DB
-      $newTag = new Tag;
-      $newTag->name = $tag;
-      $newTag->save();
+    // Add new tags to the DB
+    foreach ($input['tags'] as $tag) {
+      if($existingTag = Tag::where('name', $tag)->first()){
+        // If tag exists, make sure to add it to a list of tags that should be assigned to the post
+        $tagIDs[] = $existingTag->id;
 
-      // Add the ID of this new tag to the list of IDs of tags that should be assigned to the post
-      $tagIDs[] = $newTag->id;
-    }   
+      } else {
+        // If tag does not exist, add it to DB
+        $newTag = new Tag;
+        $newTag->name = $tag;
+        $newTag->save();
+
+        // Add the ID of this new tag to the list of IDs of tags that should be assigned to the post
+        $tagIDs[] = $newTag->id;
+      }   
+    }
+
+    // Synchronize all tags for the post
+    $post->tags()->sync($tagIDs);
+
+  } else {
+    // Detach all tags
+    $post->tags()->detach();
   }
-
-  // Synchronize all tags for the post
-  $post->tags()->sync($tagIDs);
 
   return Redirect::to('/')->with('message','Post has been updated!');
 
