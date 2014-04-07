@@ -1,0 +1,34 @@
+<form>
+		<select id="city" name="city">
+		<option value="">Choose a city...</option>
+	</select>
+	<input type="submit" value="Submit">
+</form>
+<script type="text/javascript">
+$(function() {
+    $('#city').selectize({
+        valueField: 'id',
+        labelField: 'name',
+        searchField: ['name'],
+        render: {
+            option: function(item, escape) {
+                return '<div>' + escape(item.name) + ', ' + escape(item.country) + '</div>';
+            }
+        },
+        load: function(query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: './api',
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    q: query
+                },
+                success: function(res) {
+                    callback(res.data);
+                }
+            });
+        }
+    });
+});
+</script>
