@@ -1,0 +1,19 @@
+{
+    "data": [{
+            "id": "4471641",
+            "name": "Holly Springs",
+            "country": "US",
+            "lat": "35.65127",
+            "lng": "-78.83362"
+        }, {
+            "id": "4158928",
+            "name": "Hollywood",
+            "country": "US",
+            "lat": "26.0112",
+            "lng": "-80.14949"
+        },
+        ...
+        // Up to 4-8 other cities that contain the word "Holl" in them
+        ...
+    ]
+}
