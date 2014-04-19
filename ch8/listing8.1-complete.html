@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Date picker demo application</title>
+    <!-- Bootstrap CSS served from a CDN -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/superhero/bootstrap.min.css"
+           rel="stylesheet">
+
+    <link href="vendor/pickadate/compressed/themes/classic.css" rel="stylesheet">
+    <link href="vendor/pickadate/compressed/themes/classic.date.css" rel="stylesheet">
+
+    <style>
+    /* These styles are just for the demo page, they do not affect functionality */
+    body{
+      background: url("img/stardust.png");
+    }
+
+    .centered-form .panel{
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+      color: #4e5d6c;
+    }
+
+    .centered-form{
+      margin-top: 60px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Please choose your favorite date</h3>
+            </div>
+            <div class="panel-body">
+
+              <form>
+                
+                <div class="form-group">
+                  <label for="date">Please choose your favorite date</label>
+                  <input id="date" name="date" type="text" class="form-control" placeholder="Pick one...">
+                </div>
+
+                <input type="submit" value="Submit" class="btn btn-info btn-block">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="vendor/pickadate/compressed/picker.js"></script>
+    <script src="vendor/pickadate/compressed/picker.date.js"></script>
+
+    <script>
+    $(function() {
+      // Enable Pickadate
+      $( '#date' ).pickadate();
+    });   
+    </script>
+  </body>
+</html>

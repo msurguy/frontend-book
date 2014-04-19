@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include Library's base theme and date picker theme files -->
+    <link href="vendor/pickadate/compressed/themes/classic.css" rel="stylesheet">
+    <link href="vendor/pickadate/compressed/themes/classic.date.css" rel="stylesheet">
+  </head>
+  <style type="text/css">
+    #date{
+      width:150px;
+    }
+  </style>
+  <body>
+    <form>
+      <input id="date" name="date" type="text" data-value="2015-10-25 00:00:00" placeholder="Choose a date">
+      <input type="submit" value="Submit" class="btn btn-info btn-block">
+    </form>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- Include Library's JS files -->
+    <script src="vendor/pickadate/compressed/picker.js"></script>
+    <script src="vendor/pickadate/compressed/picker.date.js"></script>
+    <script>
+    jQuery.extend( jQuery.fn.pickadate.defaults, {
+        monthsFull: [ 'JanuArr', 'Februahoy', 'Marrrch', 'Ayepril', 'Mayday', 'Jolly June', 'Julaye', 'Arrgust', 'Septemrum', 'Octobrum', 'Novembrum', 'Decembrum' ]
+    });
+
+      $(function() {
+        // Enable Pickadate on an input field
+        $('#date').pickadate({
+          formatSubmit : 'yyyy-mm-dd 00:00:00',
+        });
+
+        $('form').submit(function(e){
+          e.preventDefault();
+
+          alert('You chose : ' + $('input[name=date_submit]').val());
+        });
+      });   
+    </script>
+  </body>
+</html>
