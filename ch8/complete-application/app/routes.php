@@ -1,6 +1,6 @@
 <?php
 
-// A helper function to determin if date input is valid or not
+// A helper function to determine if date input is valid or not
 function validateDate($date, $format = 'Y-m-d H:i:s')
 {
   $d = DateTime::createFromFormat($format, $date);

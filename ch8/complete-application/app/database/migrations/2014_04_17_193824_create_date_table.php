@@ -15,7 +15,7 @@ class CreateDateTable extends Migration {
 		Schema::create('dates', function($table)
 		{
 		    $table->increments('id');
-		    $table->string('date');
+		    $table->dateTime('date');
 		    $table->timestamps();
 		});
 	}
