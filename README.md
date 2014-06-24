@@ -32,10 +32,21 @@ Are you good at building all things back end but not so good with front end? "In
     - Learn to integrate notifications and alerts by using two popular libraries. You will be able to customize the theme of the notifications and use various types (error, success, info) to notify the user about the interactions with your application. Check out some demos here: <http://jsfiddle.net/msurguy/TbcVm/embedded/result/> and here: <http://jsfiddle.net/msurguy/6d56a/embedded/result/> 
 4. Chapter 4 - Creating an AJAX contact form
     - Learn to apply the techniques you have learned in chapters 1-3 to create a full featured contact form that uses AJAX to send data to your application. You will Integrate a spinner, notifications and some AJAX in conjuction with minimal server side code to produce a good looking and useful contact form. See the demo here: <http://books.maxoffsky.com/frontend/ch4/contact>
+5. Chapter 5 - Building AJAX login/registration forms
+    - Learn to apply the techniques you have learned in chapters 1-4 to create a full featured registration form and a login form that uses AJAX to send data to your application. You will learn to integrate a spinner, inline validation and some AJAX in conjuction with minimal server side code to produce a good looking, production ready login and registration forms. See the demo here: <http://books.maxoffsky.com/frontend/ch5/chooser>
+6. Chapter 6 - Integrating tagging/tokenizing 
+    - Learn about the theory behind tagging and tokenizing. You will become familiar with one of the greatest libraries for implementing tagging and tokenizing, Selectize.js. You'll learn how to use the library, how to customize it and how to integrate it with the backend on an example of tagging a blog post.
+7. Chapter 7 - Integrating autosuggest and smart search
+    - In this chapter you'll continue learning about Selectize.js by understanding how autosuggest works. You'll understand how to format your data in order to be compatible with autosuggest library, how to change various search options and how to build a real backend for smart search. 
+8. Chapter 8 - Integrating date pickers
+    - You will learn how date pickers are built and will see practical examples of using date pickers. You'll meet one of the greatest date picker libraries available - Pickadate and will understand how to integrate it and customize it. A complete server side example is provided to demonstrate the date picker in action
+9. Chapter 9 - Integrating AJAX file uploaders
+    - You will learn about the problems that surround AJAX file uploads and will be aware of the solutions and workarounds for those problems. You'll learn about one of the most convenient libraries made for cross browser AJAX file uploads, FileAPI from Mail.ru. Throughout the chapter you'll learn how to build simple uploaders, multi uploaders, image uploaders with preview, resizing and rotation, and finally, you'll learn how to build a back end for the file uploader.
+
 
 ## What is this repo?
 
-This repository has the code from the listings in the available chapters.
+This repository has the code from the listings in the available chapters. It also contains server side examples for the chapters that feature back end integration.
 
 ## License
 
