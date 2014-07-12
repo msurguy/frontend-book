@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration page</title>
+
+    <!-- Bootstrap CSS served from a CDN -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/superhero/bootstrap.min.css"
+           rel="stylesheet">
+    <link href="css/humanejs/themes/flatty.css" rel="stylesheet" >
+    <link href="css/styles.css" rel="stylesheet" >
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+          <div id="spin-area" class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Please sign up <small>It's free!</small></h3>
+            </div>
+            <div class="panel-body">
+              <form id="registration-form" role="form" data-parsley-validate>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="first_name" class="form-control input-sm" placeholder="First Name" required>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="last_name" class="form-control input-sm" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control input-sm" placeholder="Email Address" data-parsley-trigger="change" required>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" id="password" name="password" class="form-control input-sm" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" data-parsley-equalto="#password" required>
+                    </div>
+                  </div>
+                </div>
+
+                <input type="submit" value="Register" class="btn btn-info btn-block">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="js/parsley.js"></script>
+    <script src="js/spin.js"></script>
+    <script src="js/jquery.spin.js"></script>
+    <script src="js/humane.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        var registrationForm = $('#registration-form');
+        var spinArea         = $('#spin-area');
+
+        registrationForm.submit(function(e){
+          e.preventDefault();
+
+          if(registrationForm.parsley().isValid()){
+            // Activate the spinner
+            spinArea.spin('large');
+
+            // Send a POST AJAX request to the "action" URL of the registration form
+            $.ajax({
+                type: "POST",
+                url: registrationForm.attr('action'),
+                data: registrationForm.serialize(),
+                dataType: "json"
+              })
+              .done(function(response) {
+                if (response.success) {
+                  humane.log(response.success.message,
+                    { addnCls: 'humane-flatty-success'},
+                    function(){
+                      window.location = response.success.url;
+                    }
+                  );
+                } else {
+                  humane.log(response.errors,{ addnCls: 'humane-flatty-error'})
+                }
+              })
+              .fail(function () {
+                humane.log('An error has occured, please try again',{ addnCls: 'humane-flatty-error'});
+              })
+              .always(function() {
+                spinArea.spin(false);
+              });
+          }
+
+        });
+
+      });
+    </script>
+  </body>
+</html>
