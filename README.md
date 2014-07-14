@@ -10,7 +10,7 @@ Get the book from Leanpub by cliking on the book cover:
 
 The author of the book is Maksim Surguy. 
 
-Maksim Surguy is a professional [breakdancer](http://www.youtube.com/watch?v=s_b-6265knA) turned full time web developer. He is the creator, owner and sole developer of [Bootsnipp](http://bootsnipp.com), [Filegr.am](http://filegr.am), [Builtwithlaravel.com](http://builtwithlaravel.com), [Bookpag.es](http://bookpag.es) and many more websites. Partnering with [Stidges](http://twitter.com/stidges), he created [Laravel-tricks.com](http://laravel-tricks.com) to help other developers discover tips and tricks for Laravel framework. Maks is an active contributor to the Laravel community and the author of [Laravel in Action](http://manning.com/surguy) from Manning Publications.
+Maksim Surguy is a professional [breakdancer](http://www.youtube.com/watch?v=s_b-6265knA) turned full time web developer. He is the creator, owner and sole developer of [Bootsnipp](http://bootsnipp.com), [PanoPanda](http://panopanda.co), [Builtwithlaravel.com](http://builtwithlaravel.com), [Bookpag.es](http://bookpag.es) and many more websites. Partnering with [Stidges](http://twitter.com/stidges), he created [Laravel-tricks.com](http://laravel-tricks.com) to help other developers discover tips and tricks for Laravel framework. Maks is an active contributor to the Laravel community and the author of [Laravel in Action](http://manning.com/surguy) from Manning Publications.
 
 In his free time he either travels with his wife or creates tutorials on his blog.
 
@@ -42,6 +42,8 @@ Are you good at building all things back end but not so good with front end? "In
     - You will learn how date pickers are built and will see practical examples of using date pickers. You'll meet one of the greatest date picker libraries available - Pickadate and will understand how to integrate it and customize it. A complete server side example is provided to demonstrate the date picker in action
 9. Chapter 9 - Integrating AJAX file uploaders
     - You will learn about the problems that surround AJAX file uploads and will be aware of the solutions and workarounds for those problems. You'll learn about one of the most convenient libraries made for cross browser AJAX file uploads, FileAPI from Mail.ru. Throughout the chapter you'll learn how to build simple uploaders, multi uploaders, image uploaders with preview, resizing and rotation, and finally, you'll learn how to build a back end for the file uploader.
+10. Chapter 10 - Optimization and best practices
+    - You will learn how to use gulp.js to optimize the front end of your applications and to automate common tasks. As a vital part of optimization use of CDN is required. You will learn about the available options and advantages of using a CDN.
 
 
 ## What is this repo?
